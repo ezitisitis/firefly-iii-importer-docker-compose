@@ -24,6 +24,32 @@ bash install_app.sh
 bash install_importer.sh
 ```
 
+### Production
+
+#### Run
+
+To run Firefly III execute:
+```bash
+docker-compose -f docker-compose-firefly.yml up -d
+```
+
+To run Firefly III CSV importer execute:
+```bash
+docker-compose -f docker-compose-importer.yml up -d
+```
+
+#### Stop
+
+To stop Firefly III execute:
+```bash
+docker-compose -f docker-compose-firefly.yml stop
+```
+
+To stop Firefly III CSV importer execute:
+```bash
+docker-compose -f docker-compose-importer.yml stop
+```
+
 ## TODO
 
 * Add missing links to README.md
