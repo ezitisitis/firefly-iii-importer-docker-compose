@@ -1,6 +1,8 @@
-# Environment
+# Environment files
 .env
 
-# app
+# App files
 ./app
+
+# Log files
 ./logs
