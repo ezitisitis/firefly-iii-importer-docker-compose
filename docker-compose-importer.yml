@@ -50,3 +50,4 @@ services:
       - "traefik.http.routers.firefly-importer-secure.tls.certresolver=http"
     networks:
       - proxy
+      - backend
