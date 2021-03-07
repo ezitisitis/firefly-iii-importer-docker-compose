@@ -5,7 +5,8 @@ III CSV importer.
 
 ## Setup
 
-Execute pre-install script (if you use it in local)
+### Local
+Execute pre-install script.
 
 ```bash
 bash pre-install.sh
@@ -27,3 +28,4 @@ bash install_importer.sh
 
 * Add missing links to README.md
 * Add prerequisites
+* Add base/helper for production install
