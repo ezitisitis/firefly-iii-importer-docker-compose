@@ -2,7 +2,7 @@
 
 git clone git@github.com:firefly-iii/firefly-iii.git app
 cp app/.env.example app/.env
-vi .env
+vi app/.env
 
 docker-compose -f docker-compose-firefly.yml up -d
 
