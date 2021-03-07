@@ -10,7 +10,4 @@ echo "Installing composer packages"
 docker exec firefly_importer bash -c "cd app && composer install"
 
 echo "Linking storage"
-docker exec firefly_importer bash -c "cd app && artisan storage:link"
-
-echo "Running migrations"
-docker exec firefly_importer bash -c "cd app && php artisan migrate"
+docker exec firefly_importer bash -c "cd app && php artisan storage:link"
