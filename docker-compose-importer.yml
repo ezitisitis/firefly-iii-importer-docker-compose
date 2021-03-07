@@ -17,7 +17,7 @@ volumes:
 services:
   importer:
     image: ezitisitis/laravel:php7.4-mysql5.7
-    container_name: firefly_importer
+    container_name: firefly_importer_app
     restart: always
     command: php-fpm7.4 -F
     volumes:
@@ -30,7 +30,7 @@ services:
 
   nginx:
     image: nginx:latest
-    container_name: importer_nginx
+    container_name: firefly_importer_nginx
     restart: always
     volumes:
       - ${APP_PATH}/public:/app/public

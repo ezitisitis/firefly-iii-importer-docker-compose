@@ -7,7 +7,7 @@ vi app/.env
 docker-compose -f docker-compose-importer.yml up -d
 
 echo "Installing composer packages"
-docker exec firefly_importer bash -c "cd app && composer install"
+docker exec firefly_importer_app bash -c "cd app && composer install"
 
 echo "Linking storage"
-docker exec firefly_importer bash -c "cd app && php artisan storage:link"
+docker exec firefly_importer_app bash -c "cd app && php artisan storage:link"
