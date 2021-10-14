@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  importer:
+    image: fireflyiii/csv-importer:latest
+    container_name: firefly_importer_app
+    restart: always
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env 
+    environment:
+      - FIREFLY_III_ACCESS_TOKEN
+      - FIREFLY_III_URL
+    labels:
+      - "traefik.enable=false"

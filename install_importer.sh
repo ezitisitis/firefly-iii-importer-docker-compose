@@ -1,13 +1,8 @@
 #!/bin/bash
 
-git clone git@github.com:firefly-iii/csv-importer.git app
-cp app/.env.example app/.env
-vi app/.env
 
-docker-compose -f docker-compose-importer.yml up -d
+if [ ! -f ".env" ]; then
+  cp .env.example .env
+fi
 
-echo "Installing composer packages"
-docker exec firefly_importer_app bash -c "cd app && composer install"
-
-echo "Linking storage"
-docker exec firefly_importer_app bash -c "cd app && php artisan storage:link"
+docker-compose -f docker-compose.yml up -d
